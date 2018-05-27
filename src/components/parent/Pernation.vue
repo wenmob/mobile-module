@@ -1,7 +1,7 @@
 <template>
   <div class="bis-page">
     <m-header :m-title="title" :left-show="ls" v-show="topShow"/>
-    <div class="app-main">
+    <div class="app-main" ref="appMain">
       <transition :name="transitionName">
          <router-view class="Router"/>
       </transition>
@@ -34,9 +34,10 @@ export default {
     // 判断是否为微信浏览器
     isWeixinBrowser () {
       const that = this
-      const agent = navigator.userAgent.toLowerCase()
-      if (agent.match(/MicroMessenger/i) === 'micromessenger') {
+      const agent = window.navigator.userAgent.toLowerCase()
+      if (agent.indexOf('micromessenger') !== -1) {
         that.topShow = false
+        that.$refs.appMain.style.height = 'calc(100% - 47px)'
         return true
       } else {
         that.topShow = true

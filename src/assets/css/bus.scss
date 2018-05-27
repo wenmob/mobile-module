@@ -15,4 +15,10 @@ html,body{
   background-color: $themeBgColor;
   overflow-x: hidden;
 }
+.app-main {
+  width: 100%;
+  height: calc(100% - 175px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
