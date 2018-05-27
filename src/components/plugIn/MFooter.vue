@@ -60,6 +60,7 @@ export default {
     justify-content: space-between;
     padding: 10px 26px;
     border-top: 1px solid #EAEAEA;
+    background-color: #fff;
     height: 72px;
     .m-f-item {
       text-align: center;
