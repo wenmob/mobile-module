@@ -1,7 +1,7 @@
 <template>
   <div class="mobile-head">
      <div class="left">
-       <icon name="fanhui" scale="2.8" v-show="leftShow" @click="goBack"></icon>
+       <div @click="goBack"><icon name="fanhui" scale="2.4" v-show="leftShow"></icon></div>
      </div>
      <div class="title">{{mTitle}}</div>
      <div class="right"></div>
@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     goBack () {
-      this.router.go(-1)
+      this.$router.go(-1)
     }
   }
 }
