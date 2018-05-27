@@ -64,6 +64,7 @@ export default {
 @import "../../assets/css/bus";
 .Router {
      width: 100%;
+     min-height: 100%;
      transition: all .3s ease;
      -webkit-transition: all .3s ease;
      -moz-transition: all .3s ease;
