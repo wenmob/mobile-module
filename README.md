@@ -42,5 +42,9 @@ npm ^6.00<br/>
 webpack ^3.6.0<br/>
 employ vue-cli porject
 
+#关于node-sass的错误
+npm install -g cnpm --registry=https://registry.npm.taobao.org  （安装淘宝镜像）<br/>
+cnpm install node-sass  --save 
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
