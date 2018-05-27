@@ -1,7 +1,7 @@
 <template>
   <div class="mobile-head">
      <div class="left">
-       <div @click="goBack"><icon name="fanhui" scale="2.4" v-show="leftShow"></icon></div>
+       <div v-show="leftShow" @click="goBack"><icon name="fanhui" scale="2.4"></icon></div>
      </div>
      <div class="title">{{mTitle}}</div>
      <div class="right"></div>
