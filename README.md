@@ -42,50 +42,5 @@ npm ^6.00<br/>
 webpack ^3.6.0<br/>
 employ vue-cli porject
 
-## use plug-in(插件)
-[{<br/>
- name: element-ui(前端框架),<br/>
- install: npm i element-ui -D,<br/>
- usage: (main.js),<br/>
- url: http://element-cn.eleme.io/#/zh-CN/component/installation<br/>
-},<br/>
-{<br/>
- name: normalize.css(通用样式),<br/>
- install: npm i normalize.css --save-dev,<br/>
- usage: (main.js),<br/>
- url: 'please baidu'<br/>
-},<br/>
-{<br/>
- name: nprogress(进度条),<br/>
- install: npm install --save nprogress,<br/>
- usage: (router/index.js),<br/>
- url: 'please baidu'<br/>
-},<br/>
-{<br/>
- name: js-cookie(cookie),<br/>
- install: npm install js.cookie --save,<br/>
- usage: (src/utils/auth.js),<br/>
- url: 'please baidu'<br/>
-},<br/>
-{<br/>
- name: axios(向后台发出请求),<br/>
- install: npm install axios --save,<br/>
- usage: (src/utils/request.js),<br/>
- url: 'please baidu'<br/>
-},<br/>
-{<br/>
- name: qrcodejs2(生成二维码),<br/>
- install: npm install qrcodejs2 --save,<br/>
- usage: (src/view/Mypromotion.vue),<br/>
- url: 'please baidu'<br/>
-},<br/>
-{<br/>
- name: vue-svg-icon(使用svg),<br/>
- install: npm install vue-svg-icon --save,<br/>
- usage: (src/components/layer/Parent.vue),<br/>
- url: 'please baidu'<br/>
-}]
-
-
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
