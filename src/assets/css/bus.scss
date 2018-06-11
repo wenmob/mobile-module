@@ -8,6 +8,14 @@ html,body{
   height: 100%;
   font-family:"微软雅黑","黑体","宋体";
 }
+*{
+  -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -khtml-user-select:none; /*早期浏览器*/
+  -moz-user-select:none;/*火狐*/
+  -ms-user-select:none; /*IE10*/
+  user-select:none;
+}
 .bis-page{
   position: relative;
   width: 100%;
@@ -21,4 +29,10 @@ html,body{
   overflow-x: hidden;
   overflow-y: auto;
 }
-
+input{
+   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+   -webkit-appearance:none;
+   -webkit-user-select:auto; /*webkit浏览器*/
+    border:0;
+    outline:0;
+}
