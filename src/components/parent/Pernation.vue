@@ -2,8 +2,8 @@
   <div class="bis-page">
     <m-header :m-title="title" :left-show="ls" v-show="topShow"/>
     <div class="app-main" ref="appMain">
-      <transition :name="transitionName">
-         <router-view class="Router"/>
+      <transition :name="transitionName" @before-enter="beforeEnter" @after-enter="afterEnter">
+         <router-view class="child-view" v-if="isRouterAlive" v-on:listenreload="reload" ref="rou"/>
       </transition>
     </div>
     <m-footer v-show="footShow"/>
@@ -20,8 +20,19 @@ export default {
       footShow: true,
       transitionName: 'slide-right',
       title: '赢钱网',
-      ls: true
+      ls: true,
+      isRouterAlive: true
     }
+  },
+  beforeRouteUpdate (to, from, next) {
+    let isBack = this.$router.isBack
+    if (isBack) {
+      this.transitionName = 'slide-right'
+    } else {
+      this.transitionName = 'slide-left'
+    }
+    this.$router.isBack = false
+    next()
   },
   components: {
     mHeader: MHeader,
@@ -31,6 +42,22 @@ export default {
     this.isWeixinBrowser()
   },
   methods: {
+    // 动画结束之前
+    beforeEnter () {
+      this.$refs.rou.$el.style.opacity = '0'
+    },
+    // 动画结束之后
+    afterEnter () {
+      this.$refs.rou.$el.style.opacity = '1'
+    },
+    // 刷新当前界面的方法
+    reload () {
+      this.isRouterAlive = false
+      /** $nextTick 是在下次 DOM 更新循环结束之后执行延迟回调，
+      * 在修改数据之后使用 $nextTick，则可以在回调中获取更新后的 DOM
+      * **/
+      this.$nextTick(() => (this.isRouterAlive = true))
+    },
     // 判断是否为微信浏览器
     isWeixinBrowser () {
       const that = this
