@@ -3,7 +3,7 @@
     <m-header :m-title="title" :left-show="ls" v-show="topShow"/>
     <div class="app-main" ref="appMain">
       <transition :name="transitionName" @before-enter="beforeEnter" @after-enter="afterEnter">
-         <router-view class="child-view" v-if="isRouterAlive" v-on:listenreload="reload" ref="rou"/>
+         <router-view class="child-view" ref="rou"/>
       </transition>
     </div>
     <m-footer v-show="footShow"/>
