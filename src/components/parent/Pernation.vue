@@ -89,24 +89,21 @@ export default {
 
 <style lang="scss" type="text/css">
 @import "../../assets/css/bus";
-.Router {
-     width: 100%;
-     min-height: 100%;
-     transition: all .3s ease;
-     -webkit-transition: all .3s ease;
-     -moz-transition: all .3s ease;
-     -o-transition: all .3s ease;
+.child-view {
+  position: absolute;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .slide-left-enter,
 .slide-right-leave-active {
-     opacity: 0;
-    -webkit-transform: translate(100%, 0);
-    transform: translate(100%, 0);
+  opacity: 0;
+  -webkit-transform: translate(50px, 0);
+  transform: translate(50px, 0);
 }
 .slide-left-leave-active,
 .slide-right-enter {
-     opacity: 0;
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100% 0);
+  opacity: 0;
+  -webkit-transform: translate(-50px, 0);
+  transform: translate(-50px, 0);
 }
 </style>
